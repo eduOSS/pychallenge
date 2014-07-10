@@ -20,7 +20,11 @@ text = comments[0].replace('\n','')
 #            if text[i-j].isupper and text[i+j].isupper:
 #                print text[i-4:i+4]
 fre = re.compile(r'[a-z][A-Z]{3}[a-z][A-Z]{3}[a-z]')
-print fre.findall(text)
+list = fre.findall(text)
+cha = ''
+for i in list:
+    cha += i[len(i)/2]
+print cha
 #fre = re.compile(r'BODYGUARD{3}[a-z]BODYGUARD{3}')
 #fre = re.compile(r'[a-z][A-Z][a-z][A-Z][a-z][A-Z]{3}[a-z]') 
 #fre = re.compile(r'[A-Z]{3,}[a-z][A-Z]{3,}')
