@@ -22,6 +22,8 @@ text = comments[0].replace('\n','')
 fre = re.compile(r'[a-z][A-Z]{3}([a-z])[A-Z]{3}[a-z]')
 list = fre.findall(text)
 print ''.join(list)
+
+print ''.join(re.findall('[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]',text))
 #cha = ''
 #for i in list:
 #    cha += i[len(i)/2]
