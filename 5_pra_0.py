@@ -26,6 +26,9 @@ for line in data1:
         line_string += j[0]*j[1]
     print line_string
 
+for line in data1:
+    print ''.join([j[0]*j[1] for j in line])
+
 #for i in range(len(data1)):
 #    pprint.pprint(data1[i])
 #print data1
@@ -40,3 +43,8 @@ pkl_file.close()
 banner = pickle.loads(target_html)
 print '\n'.join( [ "".join( [ i[0]*i[1] for i in b ] ) for b in banner ] )
 print '\n'.join(["".join([pair[0]*pair[1] for pair in line]) for line in banner])
+
+print '\n'.join("".join(i[0] * i[1] for i in l) for l in
+                __import__('pickle').loads(__import__('urllib').urlopen(
+                'http://www.pythonchallenge.com/pc/def/banner.p'
+                ).read()))
