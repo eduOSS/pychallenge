@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup, Comment
-import urllib2
+import urllib2,urllib
 base_url = "http://www.pythonchallenge.com/pc/def/"
 source_tail= 'peak.html'
 source_url = base_url + source_tail
@@ -19,6 +19,7 @@ pkl_file = open('banner.p', 'rb')
 
 data1 = pickle.load(pkl_file)
 
+
 for line in data1:
     line_string = ''
     for j in line:
@@ -35,3 +36,7 @@ for line in data1:
 #pprint.pprint(data2)
 
 pkl_file.close()
+
+banner = pickle.loads(target_html)
+print '\n'.join( [ "".join( [ i[0]*i[1] for i in b ] ) for b in banner ] )
+print '\n'.join(["".join([pair[0]*pair[1] for pair in line]) for line in banner])
