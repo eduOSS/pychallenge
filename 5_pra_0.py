@@ -49,9 +49,9 @@ print '\n'.join("".join(i[0] * i[1] for i in l) for l in
                 'http://www.pythonchallenge.com/pc/def/banner.p'
                 ).read()))
 
-bannerurl = "http://www.pythonchallenge.com/pc/def/banner.p"
-url = urllib.urlopen(bannerurl)
-banner = url.read()
-obj = pickle.loads(banner)
-print "\n".join([ reduce(lambda x,y : x + y[0]*y[1], line, "") for line in obj ])
+#bannerurl = "http://www.pythonchallenge.com/pc/def/banner.p"
+#url = urllib.urlopen(bannerurl)
+#banner = url.read()
+#obj = pickle.loads(banner)
+#print "\n".join([ reduce(lambda x,y : x + y[0]*y[1], line, "") for line in obj ])
 
