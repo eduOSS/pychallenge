@@ -1,10 +1,11 @@
-import urllib2,zipfile,re,urllib,os,datetime
+import urllib2,zipfile,re,urllib,os,datetime,requests
 
 zip_url = 'http://www.pythonchallenge.com/pc/def/channel.zip'
 zip_name = zip_url.split('/')[-1]
 
 if not os.path.exists('channel.zip'):
     zip_file = urllib.urlretrieve(zip_url,zip_name)
+#    zip_file = requests.get(zip_url)
     print 'download file'
 
 try:
