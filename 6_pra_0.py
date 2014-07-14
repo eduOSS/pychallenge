@@ -20,6 +20,7 @@ for info in zf.infolist():
 print comments
 for chr in set(comments):
     print chr,'  ',comments.count(chr)
+#made it the six one! 
 
 #readme = zf.read('readme.txt')
 #print readme
