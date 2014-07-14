@@ -12,15 +12,15 @@ try:
 except Exception as e:
     print e[0],type(e)
 
-comments = '' 
+#comments = '' 
+##for info in zf.infolist():
 #for info in zf.infolist():
-for info in zf.infolist():
-    comment = info.comment   
-    if comment:
-        comments += comment
-print ''.join(comments)
-for chr in set(comments):
-    print chr,'  ',comments.count(chr)
+#    comment = info.comment   
+#    if comment:
+#        comments += comment
+#print ''.join(comments)
+#for chr in set(comments):
+#    print chr,'  ',comments.count(chr)
 #made it the six one! 
 
 #readme = zf.read('readme.txt')
