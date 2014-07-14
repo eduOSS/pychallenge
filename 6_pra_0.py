@@ -8,16 +8,17 @@ if not os.path.exists('channel.zip'):
     print 'download file'
 
 try:
-    zf = zipfile.ZipFile(zip_name)
+    zf = zipfile.ZipFile(zip_name,'r')
 except Exception as e:
     print e[0],type(e)
 
-comments = ''
+comments = '' 
+#for info in zf.infolist():
 for info in zf.infolist():
     comment = info.comment   
     if comment:
         comments += comment
-print comments
+print ''.join(comments)
 for chr in set(comments):
     print chr,'  ',comments.count(chr)
 #made it the six one! 
@@ -25,6 +26,7 @@ for chr in set(comments):
 #readme = zf.read('readme.txt')
 #print readme
 
+comments = []
 file_name = '90052.txt'
 file_string = ''
 i = 2  
@@ -35,6 +37,7 @@ while file_name:
         if s.isdigit():
             i += 1
             file_name = s+'.txt'
+            comments.append(zf.getinfo(file_name).comment)
 #            size = zf.getinfo(file_name).file_size 
 #            if  size > 21:
 #                print file_name,size
@@ -42,5 +45,7 @@ while file_name:
             file_name = False
 
 print file_string,i
+print ''.join(comments)
 
 #print zf.read('46145.txt')
+
