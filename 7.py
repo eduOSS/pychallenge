@@ -1,14 +1,15 @@
-#references:
-#
+#references: http://effbot.org/imagingbook/image.htm#image-crop-method
+#http://www.pythonchallenge.com/forums/viewtopic.php?f=1&t=11&start=15
+#http://www.pythontr.com/makale.py?tid=177
+#https://docs.python.org/2/library/glob.html?highlight=glob#glob.glob
 #!/usr/bin/python
 #coding:utf8
 
 __author__ = ['leo.adams']
 
 
-import png,urllib2,numpy,itertools,urllib
+import urllib,glob
 from PIL import Image
-import glob
 
 if not glob.glob('oxygen.png'):
     url = 'http://www.pythonchallenge.com/pc/def/oxygen.png'
