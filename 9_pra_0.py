@@ -1,4 +1,5 @@
 #references:http://inteletec.com/python-http-url-request-of-password-protected-remote-server-folder/
+#http://www.effbot.org/zone/python-list.htm
 #https://gist.github.com/nakamura001/3224974
 #!/usr/bin/python
 #coding:utf8
