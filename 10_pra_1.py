@@ -1,4 +1,4 @@
-#references:
+#references:http://stackoverflow.com/questions/553871/can-anyone-provide-a-more-pythonic-way-of-generating-the-morris-sequence
 #
 #!/usr/bin/python
 #coding:utf8
